@@ -1,0 +1,198 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    background-color: #333333;
+}
+
+.header__box {
+    max-width: 1230px;
+    padding: 0px 30px;
+    margin: 0 auto;
+    color: #999999;
+    height: 45px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__items{
+    display: flex;
+    gap:40px;
+    align-items: center;
+}
+.header__item:last-child{
+    background-color: #00c8c8;
+    color: #fff;
+    padding: 12.5px 30px;
+    display: flex;
+    gap:25px;
+    margin-left: 43px;
+}
+.fa-cart-shopping{
+    font-size: 18px;
+}
+.fa-angle-down{
+    margin-left: 10px;
+}
+
+/* NAV */
+.height{
+background-color: #f8f8f8;
+height: 100vh;
+}
+.nav{
+    max-width: 1905px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+.nav__up{
+    text-transform: uppercase;
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__nav{
+    display: flex;
+    gap:115px;
+}
+.nav__items{
+    display: flex;
+    align-items: center;
+    gap:55px;
+}
+.nav__item{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #222222;
+    transition: all 0.3s ease 0s;
+}
+.nav__item i{
+    position: relative;
+    top:15px;
+    margin-left: 0px;
+    left: 0px;
+}
+.nav__item:hover{
+    color:#00c8c8;
+}
+.nav__logo{
+    font-size: 24px;
+}
+.nav__logo span{
+    font-weight: bold;
+}
+.nav__search{
+    display: inline-block;
+}
+
+.nav__search input{
+    height: 30px;
+    border: 1px solid #e7e7e7;
+    background-color: #f8f8f8;
+    padding: 10px;
+    width: 190px;
+}
+.fa-search{
+    position: relative; 
+    left:-30px;
+    color: #9e9e9e;
+}
+.nav__search input::placeholder{
+    background-color: #f8f8f8;
+    line-height: 1;
+    color:#dbbdbd;
+}
