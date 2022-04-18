@@ -90,6 +90,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1770px;
+    width: 100%;
+
+    margin: 0 auto;
+}
+
 /* HEADER */
 .header {
     width: 100%;
@@ -195,4 +206,80 @@ height: 100vh;
     background-color: #f8f8f8;
     line-height: 1;
     color:#dbbdbd;
+}
+
+
+/* Sells */
+
+.sells__title {
+    margin: 40px 0;
+}
+
+.cards__inner {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    
+    gap: 30px;
+}
+
+.cards__item {
+    position: relative;
+}
+
+.cards__item.card-3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.cards__item.card-4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.cards__prices {
+
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-size: 21px;
+    font-weight: 300;
+
+    padding-left: 15px;
+    padding-top: 12px;
+
+    color: #9a9a9a;
+}
+
+.cards__price {
+
+}
+
+.cards__price span {
+    vertical-align: top;
+
+    line-height: 1;
+}
+
+.cards__price .price__currency {
+    font-size: 10px;
+}
+
+.cards__price--old {
+    margin-right: 10px;
+}
+
+.cards__price--old .price__price {
+    text-decoration: line-through;
 }
