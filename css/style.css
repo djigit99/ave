@@ -140,7 +140,8 @@ body {
     height: 100%;
 
 }
-.cont{
+
+.cont {
     height: 100vh;
 }
 
@@ -240,16 +241,10 @@ body {
 .nav__man {
     position: absolute;
     height: 100%;
-    top:0px;
+    top: 0px;
     left: 9%;
 
 }
-
-
-/* SECTION */
-
-
-
 
 /* Sells */
 
@@ -259,10 +254,8 @@ body {
 
 .cards__inner {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
-    
     gap: 30px;
 }
 
@@ -273,7 +266,6 @@ body {
 .cards__item.card-3 {
     grid-column-start: 3;
     grid-column-end: 5;
-
     grid-row-start: 1;
     grid-row-end: 3;
 }
@@ -281,7 +273,6 @@ body {
 .cards__item.card-4 {
     grid-column-start: 1;
     grid-column-end: 3;
-
     grid-row-start: 2;
     grid-row-end: 4;
 }
@@ -290,27 +281,20 @@ body {
 
     display: flex;
     justify-content: space-between;
-
     position: absolute;
     left: 0;
     top: 0;
-
     font-size: 21px;
     font-weight: 300;
-
     padding-left: 15px;
     padding-top: 12px;
-
     color: #9a9a9a;
 }
 
-.cards__price {
-
-}
+.cards__price {}
 
 .cards__price span {
     vertical-align: top;
-
     line-height: 1;
 }
 
