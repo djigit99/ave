@@ -41,6 +41,18 @@ body {
     line-height: 1.5;
 }
 
+
+.section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1770px;
+    width: 100%;
+
+    margin: 0 auto;
+}
+
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
