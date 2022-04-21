@@ -488,6 +488,7 @@ body {
     text-align: center;
 
     transform: translateY(100%);
+    background-color: #fff;
 
     border-top: 1px solid #ccc;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
@@ -539,6 +540,7 @@ body {
 .details__icons i:hover {
     background-color: #4bb1b1;
 }
+
 /* LOOK BOOK*/
 .look__book{
     width: 100%;
