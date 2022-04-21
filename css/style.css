@@ -368,6 +368,22 @@ body {
     margin-bottom: 60px;
 }
 
+.cards__item:hover .details {
+    display: block;
+}
+
+.cards__item:hover .cards__info {
+    display: block;
+}
+
+.cards__item:hover .cards__img__thumb {
+    display: flex;
+}
+
+.cards__item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+}
+
 .cards__item.card-3 {
     grid-column-start: 3;
     grid-column-end: 5;
@@ -403,8 +419,10 @@ body {
     line-height: 1;
 }
 
-.cards__price .price__currency {
+.price__currency {
     font-size: 10px;
+
+    vertical-align: top;
 }
 
 .cards__price--old {
@@ -414,7 +432,113 @@ body {
 .cards__price--old .price__price {
     text-decoration: line-through;
 }
+.cards__img__thumb {
+    position: absolute;
+    right: 20px;
+    top: 20px;
 
+    max-width: 20%;
+    height: auto;
+
+    row-gap: 15px;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    display: none;
+}
+
+.thumb--active {
+    border: 1px solid #000; 
+}
+
+.thumb--front:hover,
+.thumb--back:hover {
+    border: 1px solid #000;
+}
+
+.cards__info {
+    display: none;
+
+    position: absolute;
+    bottom: 35%;
+    left: 45%;
+    
+    max-width: 10%;
+    max-height: 10%;
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.5em;
+
+    text-align: center;
+
+    color: rgba(178, 77, 54, 0.9);
+    background-color: #fff;
+
+    border-radius: 50%;
+}
+
+.details {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    transform: translateY(100%);
+
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.details__title {
+    font-size: 13px;
+
+    margin-top: 20px;
+
+    text-transform: uppercase;
+
+    color: #727272;
+}
+
+.details__desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+
+    margin: 10px 0;
+
+    color: #8e8c8c;
+}
+
+.details__icons {
+
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.details__icons i {
+    
+    padding: 10px;
+
+    font-size: 15px;
+
+    border-radius: 50%;
+    color: #fff;
+    background-color: #8e8c8c;
+
+    transition: background .2s linear;
+}
+
+.details__icons i:hover {
+    background-color: #4bb1b1;
+}
 /* LOOK BOOK*/
 .look__book{
     width: 100%;
