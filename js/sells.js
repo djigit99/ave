@@ -19,6 +19,3 @@ thumb_back_img.addEventListener('click', function () {
     
     photo5.src = "images/sells/photo_5_back.png";
 });
-
-
-
