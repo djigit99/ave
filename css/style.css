@@ -364,7 +364,7 @@ body {
 .cards__item {
     position: relative;
 
-    transition: all 0.3s linear;
+    transition: box-shadow 0.3s linear;
 }
 .sells__cards{
     margin-bottom: 60px;
