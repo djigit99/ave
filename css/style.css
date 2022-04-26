@@ -70,10 +70,6 @@ img {
     display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
-article>*+* {
-    margin-top: 1em;
-}
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,
@@ -137,6 +133,11 @@ body {
     display: flex;
     gap: 25px;
     margin-left: 43px;
+}
+.header__select{
+    background-color:#333333;
+    color:#999999;
+    border: none;
 }
 
 .fa-cart-shopping {
@@ -260,13 +261,13 @@ body {
     color: #575153;
     display: flex;
     justify-content: space-between;
-    line-height: 324px;
     
 }
 
 .nav__letter {
     z-index: 3;
-    font-size: 450px;
+    font-size: 28.125rem;
+    line-height: 324px;
 
 }
 .nav__button{
@@ -317,10 +318,7 @@ body {
     gap:40px;
     z-index: 500;
     box-shadow: 0px 40px 47px 0px rgba(0,0,0,0.4); 
-}
-.item__block-active{
-    display: flex;
-}
+}   
 
 .item__item{
     display: flex;
