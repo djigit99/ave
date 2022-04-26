@@ -589,7 +589,7 @@ body {
 }
 
 .details__icons i:hover {
-    background-color: #4bb1b1;
+    background-color: #4bb1b1 !important;
 }
 
 /* LOOK BOOK*/
