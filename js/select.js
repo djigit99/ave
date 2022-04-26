@@ -17,12 +17,12 @@ for (let i = 0; i < funt_prices.length; i++) {
 }
 
 for (let i = 0; i < euro_prices.length; i++) {
-    euro_prices[i] *= 0.84;
+    euro_prices[i] *= 1.18;
     euro_prices[i] = euro_prices[i].toFixed(2);
 }
 
 for (let i = 0; i < dollar_prices.length; i++) {
-    dollar_prices[i] *= 0.79;
+    dollar_prices[i] *= 1.26;
     dollar_prices[i] = dollar_prices[i].toFixed(2);
 }
 
