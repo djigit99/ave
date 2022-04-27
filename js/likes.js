@@ -22,7 +22,6 @@ function set_like(liked_id) {
             liked_el.style.backgroundColor="#8e8c8c";
 
         }
-        console.log()
 
         localStorage.setItem('liked_ids', JSON.stringify(liked_ids));
     });
