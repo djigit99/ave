@@ -37,7 +37,10 @@ for (let i = 0; i < dollar_prices.length; i++) {
 }
 function Save() {
     [...document.querySelectorAll(".price__currency")].forEach((i) => {
-        i.innerHTML =  LoadSelectValue(selectCheck) === null ? "£" : LoadSelectValue(selectCheck);
+        i.innerHTML =
+            LoadSelectValue(selectCheck) === null
+                ? "£"
+                : LoadSelectValue(selectCheck);
     });
     if (LoadSelectValue(selectCheck) === "$") {
         for (let i = 0; i < start_prices.length; i++) {
