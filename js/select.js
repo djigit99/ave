@@ -1,6 +1,16 @@
+function SaveSelectValue(el) {
+    return localStorage.setItem(el.name, el.value);
+}
+function LoadSelectValue(el) {
+    return localStorage.getItem(el.name);
+}
+
+let selectCheck = document.querySelector("[name='user_profile_color_1']");
+selectCheck.value =
+    LoadSelectValue(selectCheck) === null ? "£" : LoadSelectValue(selectCheck);
+
 var currency = document.getElementById("header__select");
 const start_prices = [...document.querySelectorAll(".price__price")];
-// console.log(start_prices);
 
 function getPriceValues(el) {
     const vals = [];
@@ -11,7 +21,7 @@ function getPriceValues(el) {
 const funt_prices = getPriceValues(start_prices);
 const dollar_prices = [...funt_prices];
 const euro_prices = [...funt_prices];
-console.log(dollar_prices);
+
 for (let i = 0; i < funt_prices.length; i++) {
     funt_prices[i] *= 1.0;
 }
@@ -25,28 +35,29 @@ for (let i = 0; i < dollar_prices.length; i++) {
     dollar_prices[i] *= 1.26;
     dollar_prices[i] = dollar_prices[i].toFixed(2);
 }
-
-console.log(dollar_prices);
-
-currency.addEventListener("change", function () {
+function Save() {
     [...document.querySelectorAll(".price__currency")].forEach((i) => {
-        i.innerHTML = this.value;
+        i.innerHTML =
+            LoadSelectValue(selectCheck) === null
+                ? "£"
+                : LoadSelectValue(selectCheck);
     });
-    console.log(this.value);
-    if (this.value === "$") {
+    if (LoadSelectValue(selectCheck) === "$") {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(dollar_prices[i]);
-            console.log(dollar_prices[i]);
         }
-    } else if (this.value === "€") {
+    } else if (LoadSelectValue(selectCheck) === "€") {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(euro_prices[i]);
-            console.log(euro_prices[i]);
         }
     } else {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(funt_prices[i]);
-            console.log(funt_prices[i]);
         }
     }
+}
+Save();
+
+currency.addEventListener("change", function () {
+    Save();
 });
