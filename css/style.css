@@ -132,9 +132,9 @@ body {
     gap: 25px;
     margin-left: 43px;
 }
-.header__select{
-    background-color:#333333;
-    color:#999999;
+.header__select {
+    background-color: #333333;
+    color: #999999;
     border: none;
 }
 
@@ -256,7 +256,6 @@ body {
     color: #575153;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .nav__letter {
@@ -318,8 +317,8 @@ body {
 
     z-index: 500;
 }
-.item__block-last{
-        right:0px;
+.item__block-last {
+    right: 0px;
 }
 
 .item__item {
@@ -336,11 +335,11 @@ body {
 .item__li a {
     font-size: 14px;
     font-weight: 300;
-    color:#727272;
+    color: #727272;
     transition: all 0.3s ease 0s;
 }
-.item__li a:hover{
-   color:#00c8c8;
+.item__li a:hover {
+    color: #00c8c8;
 }
 .item__li-main {
     margin-bottom: 10px;

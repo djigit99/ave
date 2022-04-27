@@ -1,10 +1,10 @@
 var currency = document.getElementById("header__select");
-const start_prices = [...document.querySelectorAll('.price__price')];
+const start_prices = [...document.querySelectorAll(".price__price")];
 // console.log(start_prices);
 
 function getPriceValues(el) {
     const vals = [];
-    el.forEach(i => vals.push(Number(i.innerHTML)));
+    el.forEach((i) => vals.push(Number(i.innerHTML)));
     return vals;
 }
 
@@ -27,28 +27,26 @@ for (let i = 0; i < dollar_prices.length; i++) {
 }
 
 console.log(dollar_prices);
-   
+
 currency.addEventListener("change", function () {
-    [...document.querySelectorAll('.price__currency')].forEach(i => {
+    [...document.querySelectorAll(".price__currency")].forEach((i) => {
         i.innerHTML = this.value;
-      });
-      console.log(this.value);
-      if( this.value === "$") {
+    });
+    console.log(this.value);
+    if (this.value === "$") {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(dollar_prices[i]);
             console.log(dollar_prices[i]);
         }
-      }else if (this.value === "€"){
+    } else if (this.value === "€") {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(euro_prices[i]);
             console.log(euro_prices[i]);
         }
-      } else {
+    } else {
         for (let i = 0; i < start_prices.length; i++) {
             start_prices[i].innerHTML = String(funt_prices[i]);
             console.log(funt_prices[i]);
         }
-      }
-    
-    
+    }
 });
