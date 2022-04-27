@@ -321,6 +321,9 @@ body {
     background-color:#f8f8f8;
     box-shadow: 0px 40px 47px 0px rgba(0,0,0,0.4); 
 }
+.item__block-last{
+  right:0px;
+}
 .item__item{
     display: flex;
     gap:90px;
@@ -336,6 +339,10 @@ body {
     font-size: 14px;
     font-weight: 300;
     color:#727272;
+    transition: all 0.3s ease 0s;
+}
+.item__li a:hover{
+   color:#00c8c8;
 }
 .item__li-main{
     margin-bottom: 10px;
