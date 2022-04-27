@@ -132,6 +132,11 @@ body {
     gap: 25px;
     margin-left: 43px;
 }
+.header__select {
+    background-color: #333333;
+    color: #999999;
+    border: none;
+}
 
 .fa-cart-shopping {
     font-size: 18px;
@@ -251,12 +256,12 @@ body {
     color: #575153;
     display: flex;
     justify-content: space-between;
-    line-height: 324px;
 }
 
 .nav__letter {
     z-index: 3;
-    font-size: 450px;
+    font-size: 28.125rem;
+    line-height: 324px;
 }
 .nav__button {
     max-width: 1340px;
@@ -312,6 +317,10 @@ body {
 
     z-index: 500;
 }
+.item__block-last {
+    right: 0px;
+}
+
 .item__item {
     display: flex;
     gap: 90px;
@@ -327,6 +336,10 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: #727272;
+    transition: all 0.3s ease 0s;
+}
+.item__li a:hover {
+    color: #00c8c8;
 }
 .item__li-main {
     margin-bottom: 10px;

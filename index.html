@@ -26,7 +26,13 @@
         <header class="containerr">
             <div class="header">
                 <div class="header__box">
-                    <div class="header__left">Currency : GBP</div>
+                    <div class="header__left">Currency :
+                        <select name="user_profile_color_1" class="header__select" id="header__select">
+                            <option value="£">GBP</option>
+                            <option value="$">USD</option>
+                            <option value="€">EUR</option>
+                        </select>
+                    </div>
                     <div class="header__right">
                         <ul class="header__items">
                             <li class="header__item">Register</li>
@@ -46,28 +52,133 @@
                     <div class="nav__nav">
                         <ul class="nav__items nav__items-up">
                             <li class="nav__link">
-                                <a href="#" class="nav__item item">MENS
-                                </a>
-                                <i class="fa-solid fa-angle-down gg"></i>
+                                <div class="nav__item item" id="nav__item-mens">MENS
+                                </div>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block " id="item__block-mens">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Casuals</li>
+                                                <li class="item__li"> <a href="#">Jackets</a> </li>
+                                                <li class="item__li"><a href="#">Hoodies & Sweatshirts</a> </li>
+                                                <li class="item__li"><a href="#">Polo Shirts</a> </li>
+                                                <li class="item__li"><a href="#">Sportswear</a> </li>
+                                                <li class="item__li"><a href="#">Trousers & Chinos</a> </li>
+                                                <li class="item__li"><a href="#">T-Shirts</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Formal</li>
+                                                <li class="item__li"><a href="#">Jackets</a> </li>
+                                                <li class="item__li"><a href="#">Shirts</a> </li>
+                                                <li class="item__li"><a href="#">Suits</a> </li>
+                                                <li class="item__li"><a href="#">Trousers</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav__link">
-                                <a href="#" class="nav__item item">WOMENS
-                                </a>
+                                <div class="nav__item item" id="nav__item-womens">Womens
+                                </div>
                                 <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block" id="item__block-womens">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Casuals</li>
+                                                <li class="item__li"> <a href="#">Jackets</a> </li>
+                                                <li class="item__li"><a href="#">Hoodies & Sweatshirts</a> </li>
+                                                <li class="item__li"><a href="#">Polo Shirts</a> </li>
+                                                <li class="item__li"><a href="#">Sportswear</a> </li>
+                                                <li class="item__li"><a href="#">Trousers & Chinos</a> </li>
+                                                <li class="item__li"><a href="#">T-Shirts</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Formal</li>
+                                                <li class="item__li"><a href="#">Jackets</a> </li>
+                                                <li class="item__li"><a href="#">Shirts</a> </li>
+                                                <li class="item__li"><a href="#">Suits</a> </li>
+                                                <li class="item__li"><a href="#">Trousers</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav__link">
                                 <a href="#" class="nav__item item">THE BREND
                                 </a>
                             </li>
                             <li class="nav__link">
-                                <a href="#" class="nav__item item">LOCAL STORIES
-                                </a>
+                                <div href="#" class="nav__item item" id="nav__item-lc">LOCAL STORIES
+                                </div>
                                 <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block" id="item__block-lc">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">LOCAL STORIES</li>
+                                                <li class="item__li"> <a href="#">London</a> </li>
+                                                <li class="item__li"><a href="#">New York</a> </li>
+                                                <li class="item__li"><a href="#">Paris</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav__link">
-                                <a href="#" class="nav__item item">THE BOOK
-                                </a>
+                                <div href="#" class="nav__item item" id="nav__item-bk">THE BOOK
+                                </div>
                                 <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block item__block-last" id="item__block-bk">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Our Lookbooks</li>
+                                                <li class="item__li"> <a href="#">Latest Posts (mixed)</a> </li>
+                                                <li class="item__li"><a href="#">Men’s Lookbook</a> </li>
+                                                <li class="item__li"><a href="#">Women’s Lookbook</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Your Lookbook</li>
+                                                <li class="item__li"><a href="#">View and Edit</a> </li>
+                                                <li class="item__li"><a href="#">Share</a> </li>
+                                                <li class="item__li"><a href="#">Delete</a> </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                         <div class="nav__search">
@@ -135,7 +246,7 @@
 
                                         <div class="cards__price">
                                             <span class="price__currency">£</span>
-                                            <span>89.99</span>
+                                            <span class="price__price">89.99</span>
                                         </div>
 
                                     </div>
@@ -177,8 +288,8 @@
                                     <div class="cards__prices">
 
                                         <div class="cards__price">
-                                            <span class="price__currency">£</span>
-                                            <span>47.50</span>
+                                            <span class="price__currency" id="price__currency">£</span>
+                                            <span class="price__price">47.50</span>
                                         </div>
 
                                     </div>
@@ -223,7 +334,7 @@
 
                                         <div class="cards__price">
                                             <span class="price__currency">£</span>
-                                            <span>89.99</span>
+                                            <span class="price__price">89.99</span>
                                         </div>
 
                                     </div>
@@ -264,7 +375,7 @@
 
                                         <div class="cards__price">
                                             <span class="price__currency">£</span>
-                                            <span>69.95</span>
+                                            <span class="price__price">69.95</span>
                                         </div>
 
                                     </div>
@@ -305,7 +416,7 @@
 
                                         <div class="cards__price">
                                             <span class="price__currency">£</span>
-                                            <span>29.95</span>
+                                            <span class="price__price">29.95</span>
                                         </div>
 
                                     </div>
@@ -325,7 +436,8 @@
 
                                     <div class="cards__details details">
                                         <h2 class="details__title">
-                                            Womens burnt orange casual tee <span class="price__currency">£</span>29.95
+                                            Womens burnt orange casual tee <span class="price__currency">£</span> <span
+                                                class="price__price">29.95 </span>
                                         </h2>
 
                                         <p class="details__desc">
@@ -348,7 +460,7 @@
 
                                         <div class="cards__price">
                                             <span class="price__currency">£</span>
-                                            <span>34.79</span>
+                                            <span class="price__price">34.79</span>
                                         </div>
 
                                     </div>
@@ -549,6 +661,8 @@
     <script src="js/likes.js"></script>
     <script src="js/sells__modal.js"></script>
     <script src="js/sells.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/select.js"></script>
 </body>
 
 </html>
