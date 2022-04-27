@@ -61,3 +61,4 @@ Save();
 currency.addEventListener("change", function () {
     Save();
 });
+/* SAVE*/
