@@ -144,7 +144,9 @@ body {
     color: #999999;
     border: none;
 }
-
+.sign-icon{
+    display: none;
+}
 .fa-cart-shopping {
     font-size: 18px;
 }
@@ -161,6 +163,7 @@ body {
 }
 
 .nav {
+    
     max-width: 1840px;
     margin: 0 auto;
     height: calc(100vh - 45px);
@@ -237,6 +240,7 @@ body {
 }
 
 .nav__search input {
+    font-size: 13px;
     height: 30px;
     border: 1px solid #e7e7e7;
     background-color: #f8f8f8;
@@ -258,7 +262,8 @@ body {
 }
 
 .nav__title {
-    max-width: 1530px;
+    max-width: 1620px;
+    padding: 0 45px;
     width: 100%;
     margin: 0 auto;
     font-weight: bold;
@@ -269,7 +274,7 @@ body {
 
 .nav__letter {
     z-index: 3;
-    font-size: 28.125rem;
+    font-size: 450px;
     line-height: 324px;
 }
 .nav__button {
