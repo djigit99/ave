@@ -121,14 +121,13 @@ body {
     gap: 40px;
     align-items: center;
 }
-.header__item a{
-    color:#999999;
+.header__item a {
+    color: #999999;
     transition: all 0.3s ease 0s;
 }
-.header__item a:hover{
+.header__item a:hover {
     color: #00c8c8;
 }
-
 
 .header__item:last-child {
     background-color: #00c8c8;
@@ -225,7 +224,7 @@ body {
     font-size: 24px;
     z-index: 10;
 }
-.nav__logo a{
+.nav__logo a {
     color: #000;
 }
 .nav__logo span {
