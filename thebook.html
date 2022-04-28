@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenue</title>
+
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="css/load.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/c19a8e728c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrappper">
+
+        <header class="containerr">
+            <div class="header">
+                <div class="header__box">
+                    <div class="header__left">Currency :
+                        <select name="user_profile_color_1" onchange="SaveSelectValue(this)" class="header__select"
+                            id="header__select">
+                            <option value="£">GBP</option>
+                            <option value="$">USD</option>
+                            <option value="€">EUR</option>
+                        </select>
+                    </div>
+                    <div class="header__right">
+                        <ul class="header__items">
+                            <li class="header__item"><a href="signup.html">Register</a></li>
+                            <li class="header__item"><a href="signup.html">Sign In</a></li>
+                            <li class="header__item item">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="item__text">Empty<i class="fa-solid fa-angle-down"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <div class="nav__up">
+                    <div class="nav__logo"><a href="index.html"><span>AVENUE</span> FASHION</a></div>
+                    <div class="nav__nav">
+                        <ul class="nav__items nav__items-up">
+                            <li class="nav__link">
+                                <div class="nav__item item" id="nav__item-mens">MENS
+                                </div>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block " id="item__block-mens">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Casuals</li>
+                                                <li class="item__li"> <a href="product.html">Jackets</a> </li>
+                                                <li class="item__li"><a href="product.html">Hoodies & Sweatshirts</a>
+                                                </li>
+                                                <li class="item__li"><a href="product.html">Polo Shirts</a> </li>
+                                                <li class="item__li"><a href="product.html">Sportswear</a> </li>
+                                                <li class="item__li"><a href="product.html">Trousers & Chinos</a> </li>
+                                                <li class="item__li"><a href="product.html">T-Shirts</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Formal</li>
+                                                <li class="item__li"><a href="product.html">Jackets</a> </li>
+                                                <li class="item__li"><a href="product.html">Shirts</a> </li>
+                                                <li class="item__li"><a href="product.html">Suits</a> </li>
+                                                <li class="item__li"><a href="product.html">Trousers</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav__link">
+                                <div class="nav__item item" id="nav__item-womens">Womens
+                                </div>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block" id="item__block-womens">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Casuals</li>
+                                                <li class="item__li"><a href="product.html">Jackets</a> </li>
+                                                <li class="item__li"><a href="product.html">Hoodies & Sweatshirts</a>
+                                                </li>
+                                                <li class="item__li"><a href="product.html">Polo Shirts</a> </li>
+                                                <li class="item__li"><a href="product.html">Sportswear</a> </li>
+                                                <li class="item__li"><a href="product.html">Trousers & Chinos</a> </li>
+                                                <li class="item__li"><a href="product.html">T-Shirts</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Formal</li>
+                                                <li class="item__li"><a href="product.html">Jackets</a> </li>
+                                                <li class="item__li"><a href="product.html">Shirts</a> </li>
+                                                <li class="item__li"><a href="product.html">Suits</a> </li>
+                                                <li class="item__li"><a href="product.html">Trousers</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav__link">
+                                <a href="thebrand.html" class="nav__item item">THE BREND
+                                </a>
+                            </li>
+                            <li class="nav__link">
+                                <div href="#" class="nav__item item" id="nav__item-lc">LOCAL STORIES
+                                </div>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block" id="item__block-lc">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">LOCAL STORIES</li>
+                                                <li class="item__li"> <a href="localstores.html">London</a> </li>
+                                                <li class="item__li"><a href="localstores.html">New York</a> </li>
+                                                <li class="item__li"><a href="localstores.html">Paris</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav__link">
+                                <div href="#" class="nav__item item" id="nav__item-bk">THE BOOK
+                                </div>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <div class="item__block item__block-last" id="item__block-bk">
+                                    <div class="item__item">
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Our Lookbooks</li>
+                                                <li class="item__li"> <a href="thebook.html">Latest Posts (mixed)</a>
+                                                </li>
+                                                <li class="item__li"><a href="thebook.html">Men’s Lookbook</a> </li>
+                                                <li class="item__li"><a href="thebook.html">Women’s Lookbook</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item__list">
+                                            <ul class="item__ul">
+                                                <li class="item__li item__li-main">Your Lookbook</li>
+                                                <li class="item__li"><a href="thebook.html">View and Edit</a> </li>
+                                                <li class="item__li"><a href="thebook.html">Share</a> </li>
+                                                <li class="item__li"><a href="thebook.html">Delete</a> </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__item">
+                                        <div class="item__discount">
+                                            <nobr> <span>Autumn sale!</span></nobr><br>
+                                            up to 50% off
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="nav__search">
+                            <i class="fas fa-search"></i>
+                            <input type="search" placeholder="Search..   ">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__main">
+                    <div class="nav__text">
+                        <div class="nav__mtitle"><span>OUR</span> Lookbook</div>
+                        <div class="nav__stitle">Latest Posts - mens & womens</div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="windows8">
+                <div class="wBall" id="wBall_1">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                    <div class="wInnerBall"></div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="block__social">
+            <div class="social__blocks">
+                <div class="social__items">
+                    <div class="social__links">
+                        <ul class="social__list">
+                            <li class="social__link"> <span>Information</span></li>
+                            <li class="social__link"><a href="#" class="social__a">The brand</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Local stories</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Customer service</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Privacy & cookies</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Site map</a></li>
+                        </ul>
+                    </div>
+                    <div class="social__links">
+                        <ul class="social__list">
+                            <li class="social__link"><span>Why buy from us</span></li>
+                            <li class="social__link"><a href="#" class="social__a">Shipping & returns</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Secure shopping</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Testimonials</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Award winning</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Ethical trading</a></li>
+                        </ul>
+                    </div>
+                    <div class="social__links">
+                        <ul class="social__list">
+                            <li class="social__link"><span>Your account</span></li>
+                            <li class="social__link"><a href="#" class="social__a">Sign in</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Register</a></li>
+                            <li class="social__link"><a href="#" class="social__a">View cart</a></li>
+                            <li class="social__link"><a href="#" class="social__a">View your lookbook</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Track an order</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Update information</a></li>
+                        </ul>
+                    </div>
+                    <div class="social__links">
+                        <ul class="social__list">
+                            <li class="social__link"><span>Lookbook</span></li>
+                            <li class="social__link"><a href="#" class="social__a">Latest posts</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Men’s lookbook</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Women’s lookbook</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Lookbooks RSS feed</a></li>
+                            <li class="social__link"><a href="#" class="social__a">View your lookbook</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Delete your lookbook</a></li>
+                        </ul>
+                    </div>
+                    <div class="social__links">
+                        <ul class="social__list">
+                            <li class="social__link"><span>contact details</span></li>
+                            <li class="social__link"><a href="#" class="social__a">Head Office: Avenue Fashion, <br>
+                                    180-182 Regent Street, London.</a></li>
+                            <li class="social__link"><a href="#" class="social__a">Telephone: 0123-456-789 </a></li>
+                            <li class="social__link"><a href="#" class="social__a">Email: support@yourwebsite.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social__items social__items-down">
+                    <div class="social__award social__award-black"> <span>award winner </span><br>
+                        fashion awards 2016
+                    </div>
+                    <div class="social__award social__award-blue">
+                        <div class="social__i">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <footer class="footer">
+            <div class="footer__block">
+                <div class="footer__items">© 2016 Avenue Fashion™ </div>
+                <div class="footer__items">
+                    <div class="footer__item">Design by RobbyDesigns.com</div>
+                    <div class="footer__item">Dev by Loremipsum.com</div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/likes.js"></script>
+    <script src="js/sells__modal.js"></script>
+    <script src="js/sells.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/select.js"></script>
+</body>
+
+</html>
