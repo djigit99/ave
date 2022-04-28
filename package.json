@@ -1,0 +1,22 @@
+{
+    "name": "ave",
+    "version": "1.0.0",
+    "description": "Ave shop",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/djigit99/ave.git"
+    },
+    "author": "djigit99",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/djigit99/ave/issues"
+    },
+    "homepage": "https://github.com/djigit99/ave#readme",
+    "dependencies": {
+        "express": "^4.18.0"
+    }
+}
