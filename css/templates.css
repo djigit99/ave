@@ -114,7 +114,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+.header__left {
+    color: #999999;
+}
 .header__items {
     display: flex;
     gap: 40px;
