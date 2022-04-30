@@ -48,13 +48,13 @@ function buildCardHTML(card) {
 
         <div class="cards__details details">
             <h2 class="details__title">
-                Womens burnt orange casual tee <span class="price__currency">£</span>${
-                    card.price
-                }
+                ${card.title} 
+                <span class="price__currency">£</span>
+                ${card.price}
             </h2>
 
             <p class="details__desc">
-                Classic casual t-shirt for women on the move. <br>100% cotton.
+                ${card.description}
             </p>
 
             <div class="details__icons">
