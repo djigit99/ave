@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "price": 88.99,
+        "mphoto": "sells/photo_1.png",
+        "mphoto_b": "sells/photo_1_back.png"
+    },
+    {
+        "id": 2,
+        "price": 47.5,
+        "mphoto": "sells/photo_2.png",
+        "mphoto_b": "sells/photo_2_back.png"
+    },
+    {
+        "id": 3,
+        "price": 88.99,
+        "mphoto": "sells/photo_3_cut.png",
+        "mphoto_b": "sells/photo_3_cut_back.png"
+    },
+    {
+        "id": 4,
+        "price": 69.95,
+        "mphoto": "sells/photo_4_cut.png",
+        "mphoto_b": "sells/photo_4_cut_back.png"
+    },
+    {
+        "id": 5,
+        "price": 29.95,
+        "mphoto": "sells/photo_5.png",
+        "mphoto_b": "sells/photo_5_back.png"
+    },
+    {
+        "id": 6,
+        "price": 34.79,
+        "mphoto": "sells/photo_6.png",
+        "mphoto_b": "sells/photo_6_back.png"
+    }
+]

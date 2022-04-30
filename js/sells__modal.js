@@ -57,4 +57,16 @@ const modal = {
     },
 };
 
+const modal__overlay = document.getElementById("modal__overlay");
+
+modal__overlay.addEventListener("click", function (event) {
+    if (
+        modal__overlay !== event.target &&
+        modal__overlay.firstElementChild !== event.target
+    )
+        return;
+
+    modal.close();
+});
+
 modal.init();

@@ -1,82 +1,119 @@
-const cards__info = [
-    {
-        price: 88.99,
-        mphoto: "sells/photo_1.png",
-        mphoto_b: "sells/photo_1_back.png",
-    },
-    {
-        price: 47.5,
-        mphoto: "sells/photo_2.png",
-        mphoto_b: "sells/photo_2_back.png",
-    },
-    {
-        price: 88.99,
-        mphoto: "sells/photo_3_cut.png",
-        mphoto_b: "sells/photo_3_cut_back.png",
-    },
-    {
-        price: 69.95,
-        mphoto: "sells/photo_4_cut.png",
-        mphoto_b: "sells/photo_4_cut_back.png",
-    },
-    {
-        price: 29.95,
-        mphoto: "sells/photo_5.png",
-        mphoto_b: "sells/photo_5_back.png",
-    },
-    {
-        price: 34.79,
-        mphoto: "sells/photo_6.png",
-        mphoto_b: "sells/photo_6_back.png",
-    },
-];
+// When Popular page is the current tab, the 3d and 4th image sizes are more wider than usual.
+// We use four photos for one sell-item then: mphoto, mphoto_b, mphoto_cutted, mphoto_b_cutted.
+// It's a dirty huck for short-term solution that must be resolved.
+//
+// TODO: need to think how to build the image container for "wide" images
+function _getOriginalPhoto(cutted_photo) {
+    let original_photo = cutted_photo;
 
-const ff = function () {
-    for (let i = 1; i <= 6; i++) {
-        const mphoto = document.getElementById("sells_photo_" + i);
-        const thumb_front_img = document.getElementById("thumb_front_" + i);
-        const thumb_back_img = document.getElementById("thumb_back_" + i);
-        const card__expanded = document.getElementById(`card-${i}__expanded`);
+    if (cutted_photo.includes("_cut"))
+        original_photo = cutted_photo.replace("_cut", "");
+
+    return original_photo;
+}
+
+function fetchDataJSON(url) {
+    return fetch(url).then((r) => r.json());
+}
+
+function buildCardHTML(card) {
+    const cards_item_html = document.createElement("div");
+    cards_item_html.className = "cards__item";
+
+    cards_item_html.insertAdjacentHTML(
+        "afterbegin",
+        `<div class="cards__prices">
+            <div class="cards__price">
+                <span class="price__currency">£</span>
+                <span class="price__price">${card.price}</span>
+            </div>
+        </div>
+
+        <img class="cards__img" src="images/${_getOriginalPhoto(
+            card.mphoto
+        )}" alt="">
+
+        <div class="cards__img__thumb">
+            <img class="thumb--front thumb--active" src="images/${_getOriginalPhoto(
+                card.mphoto
+            )}" alt="">
+            <img class="thumb--back" src="images/${_getOriginalPhoto(
+                card.mphoto_b
+            )}"" alt="">
+        </div>
+
+        <div class="cards__info">
+            <i class="fa-solid fa-info"></i>
+        </div>
+
+        <div class="cards__details details">
+            <h2 class="details__title">
+                Womens burnt orange casual tee <span class="price__currency">£</span>${
+                    card.price
+                }
+            </h2>
+
+            <p class="details__desc">
+                Classic casual t-shirt for women on the move. <br>100% cotton.
+            </p>
+
+            <div class="details__icons">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart" data-like-id="${card.id}"></i>
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+        </div>`
+    );
+
+    return cards_item_html;
+}
+
+async function buildCardInner() {
+    const cards_info = await fetchDataJSON("../db/cards.json");
+
+    const cards_inner = document.getElementsByClassName("cards__inner")[0];
+
+    const cards = cards_info.map(buildCardHTML);
+
+    cards.forEach((c) => cards_inner.appendChild(c));
+
+    cards.forEach((card, ind) => {
+        const mphoto = card.getElementsByClassName("cards__img")[0];
+        const thumb_front_img = card.getElementsByClassName("thumb--front")[0];
+        const thumb_back_img = card.getElementsByClassName("thumb--back")[0];
+        const card__expanded = card.getElementsByClassName(
+            "fa-up-right-and-down-left-from-center"
+        )[0];
 
         thumb_front_img.addEventListener("click", function () {
             thumb_front_img.classList.add("thumb--active");
             thumb_back_img.classList.remove("thumb--active");
 
-            // TODO: need to think how to build the image container for "wide" images
-            mphoto.src = `images/${cards__info[i - 1].mphoto.replace(
-                "_cut",
-                ""
-            )}`; // dirty hack.
+            mphoto.src = `images/${_getOriginalPhoto(cards_info[ind].mphoto)}`; // dirty hack.
         });
 
         thumb_back_img.addEventListener("click", function () {
             thumb_back_img.classList.add("thumb--active");
             thumb_front_img.classList.remove("thumb--active");
 
-            mphoto.src = `images/${cards__info[i - 1].mphoto_b.replace(
-                "_cut",
-                ""
+            mphoto.src = `images/${_getOriginalPhoto(
+                cards_info[ind].mphoto_b
             )}`; // dirty hack.
         });
 
         card__expanded.addEventListener("click", function (event) {
             if (card__expanded !== event.target) return;
 
-            modal.open(cards__info[i - 1]);
+            modal.open(cards_info[ind]);
         });
-    }
-};
+    });
 
-const modal__overlay = document.getElementById("modal__overlay");
+    return cards;
+}
 
-modal__overlay.addEventListener("click", function (event) {
-    if (
-        modal__overlay !== event.target &&
-        modal__overlay.firstElementChild !== event.target
-    )
-        return;
+(async function () {
+    const cards = await buildCardInner();
 
-    modal.close();
-});
-
-ff();
+    cards[2].classList.add("card-3");
+    cards[3].classList.add("card-4");
+})();
