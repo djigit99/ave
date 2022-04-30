@@ -35,7 +35,24 @@ const modal = {
         this.thumb_front_img.classList.add("thumb--active");
         this.thumb_back_img.classList.remove("thumb--active");
 
-        document.getElementById("price__val-tmpl").innerHTML = options.price;
+        const curr =
+            loadSelectValue(
+                document.querySelector("[name='currency_options']")
+            ) || "£";
+        let price = options.price;
+
+        switch (curr) {
+            case "$":
+                price *= FUNT_TO_USD;
+                break;
+            case "€":
+                price *= FUNT_TO_EURO;
+                break;
+            default:
+        }
+
+        document.getElementById("price__val-tmpl").innerHTML = price.toFixed(2);
+
         document
             .getElementById("cards__img-tmpl")
             .setAttribute("src", "images/" + options.mphoto);

@@ -50,7 +50,7 @@ function buildCardHTML(card) {
             <h2 class="details__title">
                 ${card.title} 
                 <span class="price__currency">£</span>
-                ${card.price}
+                <span class="price__price">${card.price}</span>
             </h2>
 
             <p class="details__desc">
@@ -64,6 +64,18 @@ function buildCardHTML(card) {
             </div>
         </div>`
     );
+
+    if (card.old_price > 0) {
+        cards_item_html
+            .getElementsByClassName("cards__prices")[0]
+            .insertAdjacentHTML(
+                "afterbegin",
+                `<div class="cards__price cards__price--old">
+                    <span class="price__currency">£</span>
+                    <span class="price__price">${card.old_price}</span>
+                 </div>`
+            );
+    }
 
     return cards_item_html;
 }
@@ -111,9 +123,18 @@ async function buildCardInner() {
     return cards;
 }
 
+function appendScript(url) {
+    const select_script = document.createElement("script");
+    select_script.setAttribute("src", url);
+    document.body.appendChild(select_script);
+}
+
 (async function () {
     const cards = await buildCardInner();
 
     cards[2].classList.add("card-3");
     cards[3].classList.add("card-4");
+
+    appendScript("js/select.js");
+    appendScript("js/likes.js");
 })();
