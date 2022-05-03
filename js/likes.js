@@ -9,7 +9,7 @@ for (let i = 0; i < liked_ids.length; i++) {
     ).style.backgroundColor = "#4bb1b1";
 }
 
-function set_like(liked_id) {
+function setLikeEventListener(liked_id) {
     const liked_el = document.querySelector(`[data-like-id='${liked_id}']`);
 
     liked_el.addEventListener("click", () => {
@@ -29,5 +29,5 @@ function set_like(liked_id) {
 }
 
 document.querySelectorAll("[data-like-id]").forEach((el) => {
-    set_like(el.dataset.likeId);
+    setLikeEventListener(el.dataset.likeId);
 });
